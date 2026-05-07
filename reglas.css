@@ -1,0 +1,70 @@
+*{
+
+}
+
+box-sizing: border-box;
+
+margin: 0;
+
+padding: 0;
+
+body{
+
+background-color: Lavenderblush;
+
+max-width: 1200px;/*definimos el tamaño maximo del contenedor*/
+
+margin: auto;/*margenews automaticos*/
+
+display: 4px;
+}
+
+.contenedor {
+
+/*usando grid*/
+
+display: grid;/*definimos el contendor grid*/
+
+grid-gap: 1rem;/*tamaño de separacion de elementos*/
+
+grid-template-columns: repeat(3, 1fr);/*se definen 3 columnas se ajusta al tammaño del contenedor*/
+
+grid-template-rows: 150px 150px 150px;/*se definen 3 filas de 150px cada una*/
+}
+.productos{
+
+background-color: aqua;/*definimos el color de fondo*/
+
+/*usando flex*/
+
+display: flex;/*definimos el contendor flex*/
+
+align-items: center;/*alineamos verticalmente los elementos */
+
+justify-content: center;/*alineamos horizontalmente los elementos*/
+
+}
+
+@media (max-width:700px){
+
+.contenedor{
+
+grid-template-columns:auto auto;/*se definen 2 columnas de ancho automatico cada una*/
+
+grid-template-rows: 150px 150px 150px 150px;/*se definen 4 filas de 150px cada una*/
+
+}
+
+}
+
+@media (max-width:450px){
+
+.contenedor{
+
+grid-template-columns: auto;/*se definen 1 columnas de ancho automatico*/
+
+grid-template-rows: repeat(8, 150px);/*se definen 8 filas de 150px de ancho cada una*/
+
+}
+
+}
